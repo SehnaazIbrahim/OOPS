@@ -1,0 +1,50 @@
+A class is a template for an object, and an object is an instance of a class.
+
+A class creates a new data type that can be used to create objects.
+
+When you declare an object of a class, you are creating an instance of that class. Thus, a class is a logical construct, and an object has physical reality (i.e., it occupies space in memory).
+
+Objects are characterized by three essential properties:
+
+State: The value of the object’s data type (e.g., an integer value or a string).
+Identity: A unique identifier that distinguishes the object from others.
+Behavior: The operations or actions that can be performed on the object based on its state.
+The dot operator links the name of the object with the name of an instance variable (e.g., obj.intValue).
+
+Although commonly referred to as the dot operator, the formal specification for Java categorizes the . as a separator.
+
+The new operator dynamically allocates memory for an object at runtime and returns a reference to it. This reference essentially represents the memory address where the object is stored. This reference is then assigned to the variable, allowing access to the object.
+
+Thus, in Java, all class objects must be dynamically allocated using the new keyword.
+
+Default Values of Object Members in Java:
+      When an object is created, its instance variables are automatically initialized with default values based on their data types. 
+Here are the default values for different types:
+Primitive types:
+      int → 0
+      boolean → false
+      char → '\u0000'
+      float → 0.0f
+      double → 0.0d
+Reference types (like objects):
+      String → null
+      Any other object reference → null
+
+EXAMPLE PROGRAM :
+class Student {
+    String name;       // Default value is null
+    int age;           // Default value is 0
+    boolean isEnrolled; // Default value is false
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a new Student object
+        Student student = new Student();
+
+        // Print the default values
+        System.out.println("Name: " + student.name);       // null
+        System.out.println("Age: " + student.age);         // 0
+        System.out.println("Is Enrolled: " + student.isEnrolled); // false
+    }
+}
